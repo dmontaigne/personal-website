@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const externalPosts = [
+  {
+    title: 'Are you doing enough of nothing?',
+    url: 'https://dwhipps.substack.com/p/are-you-doing-enough-of-nothing',
+    date: new Date('2024-05-21'),
+  },
+];
+
+const allPosts = [
+  ...posts.map((post) => ({
+    title: post.data.title,
+    url: `/writing/${post.id}`,
+    date: post.data.pubDate,
+    external: false,
+  })),
+  ...externalPosts.map((post) => ({
+    ...post,
+    external: true,
+  })),
+].sort((a, b) => b.date.valueOf() - a.date.valueOf());
+---
+
+<BaseLayout title="Writing | David Whipps" description="Thoughts on product, design, and building things.">
+  <h1>Writing</h1>
+
+  <section class="posts">
+    {allPosts.length === 0 ? (
+      <p class="empty">No posts yet. Check back soon.</p>
+    ) : (
+      <ul>
+        {allPosts.map((post) => (
+          <li>
+            <a href={post.url} target={post.external ? '_blank' : undefined} rel={post.external ? 'noopener noreferrer' : undefined}>
+              <span class="title">{post.title}</span>
+              <time datetime={post.date.toISOString()}>
+                {post.date.toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'short',
+                  day: 'numeric',
+                })}
+              </time>
+            </a>
+          </li>
+        ))}
+      </ul>
+    )}
+  </section>
+</BaseLayout>
+
+<style>
+  .posts ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .posts li {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .posts a {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--spacing-sm);
+    text-decoration: none;
+  }
+
+  .posts a:hover .title {
+    text-decoration: underline;
+  }
+
+  .posts time {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    flex-shrink: 0;
+  }
+
+  .empty {
+    color: var(--color-text-muted);
+  }
+</style>

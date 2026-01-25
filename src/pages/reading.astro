@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Reading | David Whipps" description="Books and articles I recommend.">
+  <h1>Reading</h1>
+
+  <p class="intro">A WIP compilation of frequently shared reading.</p>
+
+  <section class="reading-section">
+    <h2>Articles</h2>
+    <ul>
+      <li><a href="https://stratechery.com/2015/aggregation-theory/">Aggregation Theory</a> — Stratechery</li>
+      <li><a href="https://stratechery.com/2019/what-is-a-tech-company/">What Is A Tech Company?</a> — Stratechery</li>
+      <li><a href="https://www.reforge.com/blog/growth-loops">Growth Loops are the New Funnels</a> — Reforge</li>
+      <li><a href="https://medium.com/@gibsonbiddle/intro-to-product-strategy-60bdf72b17e3">What Is A Product?</a> — Gibson Biddle</li>
+      <li><a href="https://medium.com/@gibsonbiddle/mission-strategy-and-tactics-9d2c60269b68">Mission, Strategy, and Tactics</a> — Gibson Biddle</li>
+      <li><a href="https://hbr.org/2011/12/what-is-strategy-again">What Is Strategy?</a> — HBR</li>
+      <li><a href="https://reactionwheel.net/2019/09/a-taxonomy-of-moats.html">A Taxonomy of Moats</a> — Reaction Wheel</li>
+      <li><a href="https://review.firstround.com/the-secret-to-a-great-planning-process-lessons-from-airbnb-and-eventbrite">The Secret to a Great Planning Process</a> — First Round Review</li>
+      <li><a href="https://calteches.library.caltech.edu/51/2/CargoCult.htm">Cargo Cult Science</a> — Richard Feynman</li>
+      <li><a href="https://www.theguardian.com/books/2017/oct/21/what-writers-really-do-when-they-write">What Writers Really Do When They Write</a> — The Guardian</li>
+    </ul>
+  </section>
+
+  <section class="reading-section">
+    <h2>Books</h2>
+    <ul>
+      <li><a href="https://www.amazon.com/dp/1119387507"><em>Inspired</em></a> — Marty Cagan</li>
+      <li><a href="https://www.amazon.com/dp/0993499201"><em>Strategize</em></a> — Roman Pichler</li>
+      <li><a href="https://www.amazon.com/dp/1491971726"><em>Product Roadmaps Relaunched</em></a> — C. Todd Lombardo et al.</li>
+      <li><a href="https://www.amazon.com/dp/149197379X"><em>Escaping the Build Trap</em></a> — Melissa Perri</li>
+      <li><a href="https://www.amazon.com/dp/0998116319"><em>7 Powers</em></a> — Hamilton Helmer</li>
+      <li><a href="https://www.amazon.com/dp/0307887898"><em>The Lean Startup</em></a> — Eric Ries</li>
+      <li><a href="https://www.amazon.com/dp/1491953608"><em>Lean UX</em></a> — Jeff Gothelf</li>
+      <li><a href="https://www.amazon.com/dp/0307886239"><em>Good Strategy Bad Strategy</em></a> — Richard Rumelt</li>
+      <li><a href="https://www.amazon.com/dp/1422160599"><em>Understanding Michael Porter</em></a> — Joan Magretta</li>
+      <li><a href="https://www.amazon.com/dp/1603580557"><em>Thinking In Systems</em></a> — Donella Meadows</li>
+      <li><a href="https://www.amazon.com/dp/0992914639"><em>Dark Matter and Trojan Horses</em></a> — Dan Hill</li>
+      <li><a href="https://www.amazon.com/dp/0140135154"><em>Ways of Seeing</em></a> — John Berger</li>
+      <li><a href="https://www.amazon.com/dp/0679742379"><em>Six Memos for the Next Millennium</em></a> — Italo Calvino</li>
+      <li><a href="https://www.amazon.com/dp/0316743003"><em>Skunk Works</em></a> — Ben Rich</li>
+      <li><a href="https://www.amazon.com/dp/1732265100"><em>High Growth Handbook</em></a> — Elad Gil</li>
+      <li><a href="https://www.amazon.com/dp/1449372864"><em>UX Strategy</em></a> — Jaime Levy</li>
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+  .intro {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .reading-section {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .reading-section h2 {
+    margin-top: 0;
+  }
+
+  .reading-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .reading-section li {
+    margin-bottom: var(--spacing-sm);
+    padding-left: 0;
+  }
+</style>
