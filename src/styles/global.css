@@ -6,11 +6,11 @@
   --color-accent: #c96442;
   --color-accent-hover: #a84f33;
 
-  --font-serif: 'Libre Baskerville', Georgia, serif;
+  --font-serif: 'STIX Two Text', Georgia, serif;
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Courier New', monospace;
 
-  --max-width: 38rem;
+  --max-width: 32rem;
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
