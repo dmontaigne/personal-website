@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { ViewTransitions } from 'astro:transitions';
+import Analytics from '@vercel/analytics/astro';
 
 interface Props {
   title: string;
@@ -42,5 +43,6 @@ const pathname = Astro.url.pathname;
       <span class="logomark">✢</span>
       <p class="copyright">© 2026 David Whipps</p>
     </footer>
+    <Analytics />
   </body>
 </html>
