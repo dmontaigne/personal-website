@@ -1,27 +1,45 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="David Whipps">
-  <img src="/images/portrait.png" alt="David Whipps" class="portrait" />
-  <p>
-    I work with teams to build software.
-  </p>
-<p>
-I’m currently leading product at Lumina, a US-based startup building infrastructure for how artists fund and realize their work.
-</p>
-<p>I’m interested in how ideas become real, how teams work, and how technology fits into the world around us.
-</p>
-  <p>
-    Say <a href="mailto:hello@davidwhipps.com">hello@davidwhipps.com</a>. Follow me on <a href="https://x.com/WordsOfWhipps" target="_blank" rel="noopener noreferrer">Twitter</a>, <a href="https://dwhipps.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a>, <a href="https://www.linkedin.com/in/davidwhipps/" target="_blank" rel="noopener noreferrer">LinkedIn</a>, or <a href="https://www.goodreads.com/user/show/30745559-david-whipps" target="_blank" rel="noopener noreferrer">Goodreads</a>.
-  </p>
+    <img src="/images/portrait.png" alt="David Whipps" class="portrait" />
+    <p>I work with teams to build software.</p>
+    <p>
+        I’m currently leading product at Lumina, a US-based startup building
+        infrastructure for how artists fund and realize their work.
+    </p>
+    <p>
+        I’m interested in how ideas become real, how teams work, and how
+        technology fits into the world around us.
+    </p>
+    <p>
+        Say <a href="mailto:hello@davidwhipps.com">hello@davidwhipps.com</a>.
+        Follow me on <a
+            href="https://x.com/WordsOfWhipps"
+            target="_blank"
+            rel="noopener noreferrer">Twitter</a
+        >, <a
+            href="https://dwhipps.substack.com/"
+            target="_blank"
+            rel="noopener noreferrer">Substack</a
+        >, <a
+            href="https://www.linkedin.com/in/davidwhipps/"
+            target="_blank"
+            rel="noopener noreferrer">LinkedIn</a
+        >, or <a
+            href="https://www.goodreads.com/user/show/30745559-david-whipps"
+            target="_blank"
+            rel="noopener noreferrer">Goodreads</a
+        >.
+    </p>
 </BaseLayout>
 
 <style>
-  .portrait {
-    display: block;
-    width: 120px;
-    height: auto;
-    margin: calc(var(--spacing-xl) * -1.0) auto calc(var(--spacing-lg) * 0.67);
-  }
+    .portrait {
+        display: block;
+        width: 120px;
+        height: auto;
+        margin: calc(var(--spacing-xl) * -1) auto calc(var(--spacing-lg) * 0.67);
+    }
 </style>
