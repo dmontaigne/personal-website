@@ -27,6 +27,10 @@
     --color-accent: #d9785c;
     --color-accent-hover: #e8937a;
   }
+
+  .portrait {
+    filter: invert(1);
+  }
 }
 
 *,
