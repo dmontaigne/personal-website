@@ -1,0 +1,24 @@
+---
+// Constructs email client-side to prevent bot scraping.
+// Renders a placeholder <span> that JS replaces with a mailto: link.
+---
+
+<span class="eml" data-u="hello" data-d="davidwhipps.com"></span>
+
+<script>
+  function revealEmails() {
+    document.querySelectorAll('.eml').forEach((el) => {
+      const u = el.getAttribute('data-u');
+      const d = el.getAttribute('data-d');
+      if (!u || !d) return;
+      const addr = u + '@' + d;
+      const a = document.createElement('a');
+      a.href = 'mai' + 'lto:' + addr;
+      a.textContent = addr;
+      el.replaceWith(a);
+    });
+  }
+
+  revealEmails();
+  document.addEventListener('astro:page-load', revealEmails);
+</script>

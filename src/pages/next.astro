@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ObfuscatedEmail from "../components/ObfuscatedEmail.astro";
 ---
 
 <BaseLayout
@@ -124,9 +125,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             pass it along. Happy to take it from there.
         </p>
         <p>
-            I’m reachable at <a href="mailto:hello@davidwhipps.com"
-                >hello@davidwhipps.com.</a
-            >
+            I'm reachable at <ObfuscatedEmail />.
         </p>
     </article>
 </BaseLayout>
